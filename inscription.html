@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Enregistrement - Marathon de Valence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="flex-container">
+    <nav class="sidenav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="course.html">La Course</a></li>
+            <li><a href="inscription.html">Enregistrement</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="main-horiz">
+        <section class="section-horiz">
+            <h2>Enregistrement à la course</h2>
+            <p>
+                Inscriptions à l’Expo 42K et à la Feria Valencia du 4 au 6 décembre.<br>
+                Maximum : 35 000 participants, dossards vite épuisés.<br>
+                Aucun dossard remis le jour de la course.
+            </p>
+            <form id="inscription-form">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="categorie">Catégorie :</label>
+                <select id="categorie" name="categorie" required>
+                    <option value="">Sélectionner</option>
+                    <option value="senior">Senior</option>
+                    <option value="veteran">Vétéran</option>
+                    <option value="junior">Junior</option>
+                </select>
+                <button type="submit">Envoyer l’inscription</button>
+            </form>
+            <div id="confirmation-inscription" style="display:none;">
+                <p>Merci pour votre inscription ! Un e-mail de confirmation vous sera envoyé prochainement.</p>
+            </div>
+        </section>
+    </main>
+</div>
+<footer class="footer-horiz">
+    <p>&copy; 2025 Marathon de Valence</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
