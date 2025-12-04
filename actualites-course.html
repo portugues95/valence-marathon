@@ -4,7 +4,30 @@
     <meta charset="UTF-8">
     <title>Actualités – Marathon de Valence</title>
     <link rel="stylesheet" href="styles.css">
-
+    <style>
+    /* Ajout simple pour la navigation par onglets */
+        .tabs { display: flex; margin-bottom: 0; }
+        .tab-btn {
+            background: #f8fcff;
+            color: #193d7d;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-weight: bold;
+            font-size:1em;
+            padding: 18px 32px 12px 32px;
+            cursor: pointer;
+            transition: border .15s, color .15s;
+        }
+        .tab-btn.active {
+            border-bottom: 3px solid #ff8300;
+            color: #ff8300;
+        }
+        .tab-content { display:none; padding: 20px 0 4px 0;}
+        .tab-content.active { display:block; }
+        .link-articles { margin-top: 14px;}
+        .link-articles a { display:block; color:#193d7d; font-weight:bold; margin-bottom:7px;}
+        .link-articles a:hover{ color:#ff8300;}
+    </style>
     <script>
         function showTab(n) {
             var contents=document.querySelectorAll('.tab-content');
