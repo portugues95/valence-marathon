@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Marathon de Valence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="flex-container">
+    <nav class="sidenav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="course.html">La Course</a></li>
+            <li><a href="inscription.html">Enregistrement</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="main-horiz">
+        <section class="section-horiz">
+            <h2>Contact & Renseignements</h2>
+            <form id="contact-form">
+                <label for="nom-contact">Nom :</label>
+                <input type="text" id="nom-contact" name="nom-contact" required>
+                <label for="email-contact">E-mail :</label>
+                <input type="email" id="email-contact" name="email-contact" required>
+                <label for="message">Votre message :</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <div id="confirmation-contact" style="display:none;">
+                <p>Votre message a bien été envoyé. Nous vous répondrons rapidement.</p>
+            </div>
+            <div class="contact-info horiz-contact">
+                <ul>
+                    <li>📍 <strong>Écrivez-nous:</strong> 3 rue de la Paix, Paris</li>
+                    <li>✉️ <strong>Email:</strong> h.alexiobraz@leps.fr</li>
+                    <li>☎️ <strong>Téléphone:</strong> 01 23 45 67 89</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
+<footer class="footer-horiz">
+    <p>&copy; 2025 Marathon de Valence</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
