@@ -4,52 +4,63 @@ body {
     background: #eaecef;
     color: #161a2b;
 }
-.flex-container {
-    display: flex;
-    min-height: 100vh;
-}
-.sidenav {
-    min-width: 220px;
+.topnav {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:100;
     background: #253fa6;
+    box-shadow: 0 4px 16px #253fa626;
+}
+.nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0;
+    height: 64px;
 }
-.sidenav ul {
+.nav-title {
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    margin-right: 44px;
+}
+.topnav ul {
+    display: flex;
     list-style: none;
+    padding: 0;
     margin: 0;
-    padding: 35px 0 0 0;
-    width: 100%;
+    gap: 32px;
 }
-.sidenav ul li {
-    margin-bottom: 30px;
-    font-size: 1.15em;
-    text-align: center;
-}
-.sidenav ul li a {
+.topnav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: color .15s;
-    padding: 10px 0;
-    display: block;
+    font-size: 1.08em;
+    padding: 7px 4px;
+    border-bottom: 2px solid transparent;
+    transition: border .14s;
 }
-.sidenav ul li a:hover {
+.topnav ul li a:hover, .topnav ul li a.active {
+    border-bottom: 2px solid #fff101;
     color: #fff101;
 }
 .main-horiz {
-    flex: 1;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
     background: #fff;
-    min-height: 100vh;
-    padding: 45px 30px 35px 30px;
+    min-height: calc(100vh - 120px);
+    padding: 120px 30px 35px 30px; /* padding-top adapté à la navbar */
+    max-width: 1400px;
+    margin: 0 auto;
     box-shadow: 0 6px 22px #253fa626;
 }
 .section-horiz {
@@ -163,6 +174,9 @@ form input, form textarea, form select {
     padding:6px;
     font-size: 1em;
 }
+form textarea {
+    min-height: 70px;
+}
 form button {
     background: #253fa6;
     color: #fff;
@@ -203,8 +217,9 @@ form button:hover {
     z-index:10;
 }
 @media (max-width: 1000px) {
-    .main-horiz { flex-direction: column; }
+    .main-horiz { flex-direction: column; padding-top: 80px;}
     .section-horiz { width: 98%; margin-right:0; margin-bottom:22px;}
     .image-section{width:98%; height:210px; margin-right:0;}
     .main-img{height:210px;}
+    .nav-content {flex-direction: column; height:auto; gap:10px;}
 }
