@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualités – Marathon de Valence</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajout simple pour la navigation par onglets */
+        .tabs { display: flex; margin-bottom: 0; }
+        .tab-btn {
+            background: #f8fcff;
+            color: #193d7d;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-weight: bold;
+            font-size:1em;
+            padding: 18px 32px 12px 32px;
+            cursor: pointer;
+            transition: border .15s, color .15s;
+        }
+        .tab-btn.active {
+            border-bottom: 3px solid #ff8300;
+            color: #ff8300;
+        }
+        .tab-content { display:none; padding: 20px 0 4px 0;}
+        .tab-content.active { display:block; }
+        .link-articles { margin-top: 14px;}
+        .link-articles a { display:block; color:#193d7d; font-weight:bold; margin-bottom:7px;}
+        .link-articles a:hover{ color:#ff8300;}
+    </style>
+    <script>
+        function showTab(n) {
+            var contents=document.querySelectorAll('.tab-content');
+            var buttons=document.querySelectorAll('.tab-btn');
+            for(let i=0;i<contents.length;i++){
+                contents[i].classList.remove('active');
+                buttons[i].classList.remove('active');
+            }
+            contents[n].classList.add('active');
+            buttons[n].classList.add('active');
+        }
+        window.onload = function() { showTab(0); }
+    </script>
+</head>
+<body>
+<div class="topnav">
+    <div class="nav-content">
+        <span class="nav-title">MARATHON DE VALENCE</span>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#" class="active">Actualités</a></li>
+            <li><a href="#">Participants</a></li>
+            <li><a href="#">Infos pratiques</a></li>
+        </ul>
+    </div>
+</div>
+<main class="main-horiz" style="flex-direction:column; max-width:850px;">
+    <h2 style="color:#1a3777; margin-top:0; margin-bottom:20px; text-align:center; font-size:2em;">Actualités de la Course</h2>
+    <div class="tabs" style="justify-content:center;">
+        <button class="tab-btn" onclick="showTab(0)">Actualités</button>
+        <button class="tab-btn" onclick="showTab(1)">Records</button>
+        <button class="tab-btn" onclick="showTab(2)">Histoire</button>
+        <button class="tab-btn" onclick="showTab(3)">Anecdotes</button>
+    </div>
+    <!-- Onglet 1 -->
+    <div class="tab-content">
+        <h3 style="color:#ff8300;">Actualités</h3>
+        <p>Retrouvez les dernières informations sur le Marathon de Valence: météo, favoris, changements de parcours et nouveautés pour les spectateurs.</p>
+        <div class="link-articles">
+            <a href="https://www.maratonvalencia.com/fr/nouvelles/" target="_blank">Toutes les actualités officielles</a>
+            <a href="https://www.lequipe.fr/Athletisme/Actualites/valence-une-course-de-tous-les-records/1427705" target="_blank">Édition 2025 : tous les favoris au départ</a>
+            <a href="https://www.runnersworld.com/fr/news/a46071228/marathon-valence-2024-date-parcours-record/" target="_blank">Nouveautés du parcours et conseils</a>
+        </div>
+    </div>
+    <!-- Onglet 2 -->
+    <div class="tab-content">
+        <h3 style="color:#ff8300;">Records</h3>
+        <p>Le Marathon de Valence détient plusieurs records mondiaux : temps, participation, performances féminines et masculines.</p>
+        <div class="link-articles">
+            <a href="https://www.maratonvalencia.com/fr/records/" target="_blank">Historique des records</a>
+            <a href="https://fr.wikipedia.org/wiki/Marathon_de_Valence" target="_blank">Temps et podiums par édition</a>
+            <a href="https://athletevalencemarathon.com/" target="_blank">Statistiques remarquables</a>
+        </div>
+    </div>
+    <!-- Onglet 3 -->
+    <div class="tab-content">
+        <h3 style="color:#ff8300;">Histoire de la course</h3>
+        <p>Depuis 1981, Valence accueille des milliers de coureurs venus du monde entier. Découvrez l’évolution et les moments marquants de l’épreuve.</p>
+        <div class="link-articles">
+            <a href="https://www.maratonvalencia.com/fr/histoire/" target="_blank">L'histoire officielle</a>
+            <a href="https://www.valenciabonita.es/2019/12/02/maraton-de-valencia/" target="_blank">Moments incontournables</a>
+            <a href="https://www.sportmag.fr/athletisme/marathon-de-valence-un-lieu-de-records/" target="_blank">Pourquoi la course est si rapide ?</a>
+        </div>
+    </div>
+    <!-- Onglet 4 -->
+    <div class="tab-content">
+        <h3 style="color:#ff8300;">Anecdotes</h3>
+        <p>Incroyables histoires de coureurs, records insolites, météo folle et faits amusants du Marathon de Valence.</p>
+        <div class="link-articles">
+            <a href="https://maratonvalencia.com/fr/les-grandes-histoires-du-marathon-de-valence/" target="_blank">Les plus belles anecdotes</a>
+            <a href="https://www.runtheworld.fr/marathon-valencia/" target="_blank">Les secrets du parcours</a>
+            <a href="https://www.ouest-france.fr/sport/running/athletisme-marathon-de-valence-la-folie-des-records-7135068" target="_blank">Faits insolites et records fous</a>
+        </div>
+    </div>
+</main>
+<footer class="footer-horiz">
+    <div class="sponsors-bar">
+        <div class="sponsors-title">
+            Sponsors et partenaires officiels
+        </div>
+        <div class="logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Powerade_logo.svg" alt="Powerade" title="Powerade">
+            <img src="https://www.carnicaserrano.com/wp-content/uploads/2021/10/serrano-fondo-blanco.png" alt="Serrano" title="Serrano">
+            <img src="https://www.colacar.es/wp-content/uploads/logo-colacar.svg" alt="Cola-Car" title="Cola-Car">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Hyundai_Motor_Company_logo.svg" alt="Hyundai" title="Hyundai">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Midea_Group_logo.svg" alt="Midea" title="Midea">
+            <img src="https://www.coros.com/images/coros-logo-black@2x.png" alt="Coros" title="Coros">
+            <img src="https://www.enervit.com/on/demandware.static/-/Library-Sites-EnervitSharedLibrary/default/dw573de370/images/logo-enervit.png" alt="Enervit" title="Enervit">
+            <img src="https://www.msc.com/-/media/msc/logo/msc-logo.svg" alt="MSC" title="MSC">
+            <img src="https://www.feriavalencia.com/wp-content/uploads/2021/10/Logo-FV-2021_color.png" alt="Feria Valencia" title="Feria Valencia">
+            <img src="https://www.caixabank.com/deployedfiles/caixabank.com/Estaticos/DISENO/logo-caixabank.png" alt="CaixaBank" title="CaixaBank">
+            <img src="https://www.melendez.es/wp-content/uploads/2020/09/logo-melendez.png" alt="Meléndez" title="Meléndez">
+            <img src="https://www.centrallecheraasturiana.es/wp-content/themes/centrallecheraasturiana/img/logo-central-lechera-asturiana.svg" alt="Central Lechera Asturiana" title="Central Lechera Asturiana">
+        </div>
+    </div>
+    <div>© Marathon de Valence 2025 – Tous droits réservés</div>
+</footer>
+</body>
+</html>
