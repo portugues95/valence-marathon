@@ -16,3 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+<script>
+        function showTab(n) {
+            var contents=document.querySelectorAll('.tab-content');
+            var buttons=document.querySelectorAll('.tab-btn');
+            for(let i=0;i<contents.length;i++){
+                contents[i].classList.remove('active');
+                buttons[i].classList.remove('active');
+            }
+            contents[n].classList.add('active');
+            buttons[n].classList.add('active');
+        }
+        window.onload = function() { showTab(0); }
+    </script>
