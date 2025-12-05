@@ -14,9 +14,9 @@ body {
     box-shadow: 0 4px 16px #1a377780;
 }
 .nav-content {
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
     display: flex;
     align-items: center;
     height: 64px;
