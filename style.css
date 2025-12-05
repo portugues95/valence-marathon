@@ -72,6 +72,9 @@ body {
     padding: 28px 26px;
     margin-bottom: 0;
     border: 2px solid #1a377728;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .image-section {
     position: relative;
