@@ -58,7 +58,7 @@ body {
     background: #ecf5ff;
     min-height: calc(100vh - 120px);
     padding: 120px 30px 35px 30px;
-    max-width: 1000px; /* limite largeur pour colonne */
+    max-width: 800px; /* limite largeur pour colonne */
     margin: 0 auto;
     box-shadow: 0 6px 22px #1a377715;
     gap: 32px;
