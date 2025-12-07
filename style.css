@@ -302,12 +302,16 @@ form button:hover {
 .link-articles a { display:block; color:#193d7d; font-weight:bold; margin-bottom:7px;}
 .link-articles a:hover{ color:#ff8300;}
 
+/* Container des cartes dans chaque onglet */
 .card-links {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
+/* Carte cliquable */
 .card {
     width: 240px;
     border-radius: 18px;
@@ -316,29 +320,34 @@ form button:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-decoration: none;
     color: #000;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 }
 
+/* Image en haut */
 .card-img {
     width: 100%;
     height: 140px;
     object-fit: cover;
 }
 
+/* Texte interne */
 .card-body {
     padding: 12px 15px;
 }
 
+/* Titre */
 .card h4 {
     margin: 0 0 10px 0;
     font-size: 1em;
+    line-height: 1.3em;
 }
 
+/* Ligne “source” */
 .card-source {
     display: flex;
     align-items: center;
