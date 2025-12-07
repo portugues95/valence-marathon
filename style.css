@@ -301,3 +301,53 @@ form button:hover {
 .link-articles { margin-top: 14px;}
 .link-articles a { display:block; color:#193d7d; font-weight:bold; margin-bottom:7px;}
 .link-articles a:hover{ color:#ff8300;}
+
+.card-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 240px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 12px 15px;
+}
+
+.card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1em;
+}
+
+.card-source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.source-logo {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    object-fit: cover;
+}
