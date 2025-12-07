@@ -55,7 +55,7 @@ body {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    background: #ecf5ff;
+    background: transparent ;
     min-height: calc(100vh - 120px);
     padding: 120px 30px 35px 30px;
     max-width: 800px; /* limite largeur pour colonne */
